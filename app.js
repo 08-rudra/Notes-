@@ -11,6 +11,11 @@ const MongoStore = require('connect-mongo')
 
 const app = express();
 app.set('view engine', 'ejs')
+app.set('views', './Views');
+
+app.get('/', (req, res) => {
+    res.render('index'); 
+})
 
 const PORT = process.env.PORT || 8000;
 
